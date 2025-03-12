@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+svg {
+  cursor: pointer;
+}
+
+.content {
+  padding: 10px;
+}
