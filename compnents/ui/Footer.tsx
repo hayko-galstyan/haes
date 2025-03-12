@@ -12,9 +12,9 @@ const Footer = () => {
   return (
     <footer className="w-full bg-black text-white min-h-[300px] flex flex-col-reverse flex-wrap justify-around py-6 gap-[32px] items-center sm:flex-row sm:gap-6 sm:px-8">
       <div className="flex flex-col gap-4">
-        <Title text="HAES" className="align-center" />
-        <Title variant="h3" className="flex items-center gap-2">
-          <Zap size={iconSize} /> 2017
+        <Title className="align-center text-[32px] flex items-center gap-2">
+          <Zap size={iconSize} />
+          HAES in 2017
         </Title>
       </div>
       <ul className="flex flex-col gap-4">
@@ -44,7 +44,6 @@ const Footer = () => {
         </li>
       </ul>
 
-      {/* Right Section */}
       <Logo width={100} height={100} />
     </footer>
   );

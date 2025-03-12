@@ -3,8 +3,8 @@
 import { useState } from "react";
 import { PATHS } from "@/config/constant";
 import Link from "next/link";
-import Button from "./Button";
 import { PanelTopClose, PanelTopOpen, PhoneCall } from "lucide-react";
+import { Logo, Button } from "./index";
 
 const Header = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -12,7 +12,7 @@ const Header = () => {
   const onToggle = () => setOpenMenu((prev) => !prev);
 
   return (
-    <header className="w-full shadow-md flex p-4 justify-between items-center">
+    <header className="w-full shadow-md bg-black flex p-4 justify-between items-center">
       <div className="md:hidden">
         {!openMenu ? (
           <PanelTopOpen onClick={onToggle} />
@@ -21,7 +21,8 @@ const Header = () => {
         )}
       </div>
 
-      <div>Logo</div>
+      <Logo />
+
       <ul
         className={`flex gap-4 ${
           openMenu
@@ -33,7 +34,7 @@ const Header = () => {
           <Link
             key={`header-${item}`}
             href={PATHS[item as keyof typeof PATHS]}
-            className="hover:text-red-500 transition duration-300 ease-in-out"
+            className="text-white hover:text-red-500 transition duration-300 ease-in-out"
           >
             {item}
           </Link>
